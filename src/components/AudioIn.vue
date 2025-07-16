@@ -19,9 +19,7 @@ console.log("Mode:", import.meta.env.MODE)
   - To set environment variables for a specific mode, create `.env`, `.env.development`, `.env.production`, or `.env.<custom>` files in your project root.
   - You cannot set import.meta.env.MODE directly in code; it is determined by how you run Vite.
 */
-const uploadUrl = import.meta.env.MODE !== 'development'
-  ? '/platane/php/audioRx.php'
-  : 'https://llama.ok-lab-karlsruhe.de/platane/php/audioRx.php'
+const uploadUrl = 'https://llama.ok-lab-karlsruhe.de/platane/php/audioRx.php'
 
 
 
