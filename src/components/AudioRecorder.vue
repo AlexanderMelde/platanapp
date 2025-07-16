@@ -60,9 +60,7 @@ const progress = ref<number>(0)
 const countdownRef = ref<number>(10)
 const timerRef = ref<NodeJS.Timeout | null>(null)
 
-const uploadUrl = import.meta.env.MODE !== 'development'
-  ? '/php/audioRx.php'
-  : 'https://llama.ok-lab-karlsruhe.de/platane/php/audioRx.php'
+const uploadUrl = 'https://llama.ok-lab-karlsruhe.de/platane/php/audioRx.php'
   
 import { defineEmits } from 'vue'
 const emit = defineEmits<{
