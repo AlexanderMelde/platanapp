@@ -27,17 +27,11 @@ const model = ref<string>('granite3.3:2b') // Default model
 const chatHistory = ref<Array<{type: 'user' | 'assistant', message: string, audioUrl?: string}>>([])
 
 
-const convertUrl = import.meta.env.MODE !== 'development'
-  ? '/platane/php/convert.php'
-  : 'https://llama.ok-lab-karlsruhe.de/platane/php/convert.php'
+const convertUrl = 'https://llama.ok-lab-karlsruhe.de/platane/php/convert.php'
 
-const whisperUrl = import.meta.env.MODE !== 'development'
-  ? '/platane/php/whisper.php'
-  : 'https://llama.ok-lab-karlsruhe.de/platane/php/whisper.php'
+const whisperUrl = 'https://llama.ok-lab-karlsruhe.de/platane/php/whisper.php'
 
-const modelUrl = import.meta.env.MODE !== 'development'
-  ? '/platane/php/plataChat.php'
-  : 'https://llama.ok-lab-karlsruhe.de/platane/php/plataChat.php'
+const modelUrl = 'https://llama.ok-lab-karlsruhe.de/platane/php/plataChat.php'
 
 
 async function handleUploadResult(payload: { success: boolean; data?: { filename: string } }): Promise<void> {
